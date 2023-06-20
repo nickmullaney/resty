@@ -4,13 +4,13 @@ import './Form.scss';
 
 function Form(props) {
 
-  let handleSubmit = e => {
+  let handleSubmit = (e) => {
     e.preventDefault();
     const formData = {
       method:'GET',
       url: 'https://pokeapi.co/api/v2/pokemon',
     };
-    this.props.handleApiCall(formData);
+    props.handleApiCall(formData);
   }
 
     return (
