@@ -8,7 +8,8 @@ html, body {
 
 body {
   background: $backgroundColor;
-  height: 100%;
+  height: 100vh;
+  align-items: center;
 
   #root {
     display: flex;
@@ -17,18 +18,63 @@ body {
   }
 
   footer {
-    background: darken($backgroundColor, 50);
-    border-top: 1px solid #eee;
-    padding: 1em 3em;
-    margin: 0;
-  }
-
-  header {
-    background: darken($backgroundColor, 75);
+    height: 5%;
+    position: relative;
+    overflow: hidden;
+    background: rgb(118,116,154);
+    background: linear-gradient(90deg, rgba(118,116,154,1) 0%, rgba(96,96,223,1) 45%, rgba(0,212,255,1) 100%);
+    background-size: cover;
     border-bottom: 1px solid #eee;
     color: #eee;
-    padding: 0;
+    padding-left: 1rem;
+    padding-top: 1rem;
     margin: 0;
-    text-align: center;
+    text-align: left;
   }
+
+ section{
+  margin: auto;
+  margin-top: 1rem;
+ }
+
+ section::after{
+  border: 1px solid red;
+ }
+
+  #requestMethod{
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #eee;
+    font-size: medium;
+    font-weight: 400;
+    background: linear-gradient(90deg, rgba(118,116,154,1) 0%, rgba(96,96,223,1) 45%, rgba(0,212,255,1) 100%);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: fit-content;
+    box-shadow: 2px 3px 14px 1px rgba(0,0,0,0.75);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 25px;
+  }
+
+  #URL{
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #eee;
+    font-size: medium;
+    font-weight: 400;
+    background: linear-gradient(90deg, rgba(118,116,154,1) 0%, rgba(96,96,223,1) 45%, rgba(0,212,255,1) 100%);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: fit-content;
+    box-shadow: 2px 3px 14px 1px rgba(0,0,0,0.75);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 25px;
+  }
+
 }

@@ -4,11 +4,25 @@ $radius: 40%;
 form {
   display: inline-block;
   margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   width: 200px;
+  border: 1px solid rgb(30, 0, 255);
+  height: auto;
+  width: auto;
+  padding: 1rem;
+  box-shadow: 2px 3px 14px 1px rgba(0,0,0,0.75);
+  color: #eee;
+    font-size: medium;
+    font-weight: 400;
+    background: linear-gradient(90deg, rgba(118,116,154,1) 0%, rgba(96,96,223,1) 45%, rgba(0,212,255,1) 100%);
 
   label {
     display: flex;
     margin: 1rem 0;
+    padding: 1 rem;
+    align-items: center;
+    justify-content: space-evenly;
 
     &.methods {
       span {
@@ -20,7 +34,25 @@ form {
         &:hover, &.active {
           background: #fff;
         }
+          color:black;
+          font-weight: 400;
+          border: 1px solid black;
+          border-radius: 20px;
+          padding-left:0.5rem;
+          padding-right:0.5rem;
+          padding-top: 0.25rem;
+          padding-bottom: 0.25rem;
+          box-shadow: 1px 1px 6px 0px rgba(0,0,0,0.75);
       }
     }
+  }
+
+  button{
+    border-radius: 20px;
+    padding-left:0.5rem;
+    padding-right:0.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    box-shadow: 1px 1px 6px 0px rgba(0,0,0,0.75);
   }
 }
