@@ -1,5 +1,7 @@
 # React Applications
 
+This application is to build a rest react app
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
