@@ -31,12 +31,13 @@ const App = () => {
 
   return (
     <>
-      <Header /> // Render Header component
-      <div id='requestMethod'>Request Method: {requestParams.method}</div> // Display the selected request method
-      <div id='URL'>URL: {requestParams.url}</div> // Display the entered URL
-      <Form handleApiCall={callApi} /> // Render Form component and pass the callApi function as a prop
-      <Results data={data} loading={loading} /> // Render Results component and pass data and loading state as props
-      <Footer /> // Render Footer component
+   
+      <Header /> 
+      <div id='requestMethod'>Request Method: {requestParams.method}</div>
+      <div id='URL'>URL: {requestParams.url}</div> 
+      <Form handleApiCall={callApi} /> 
+      <Results data={data} loading={loading} /> 
+      <Footer />
     </>
   );
 };
