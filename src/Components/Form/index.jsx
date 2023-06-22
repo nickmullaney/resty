@@ -11,9 +11,9 @@ function Form(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = {
-      method: method,
-      url: url,
-      json: json,
+      method,
+      url,
+      json,
     };
     props.handleApiCall(formData);
   };
@@ -29,8 +29,8 @@ function Form(props) {
       <form onSubmit={handleSubmit}>
         <label>
           <span>URL: </span>
-          <input name="url" type="text" value={url} onChange={(event) => setUrl(event.target.value)} />
-          <button type="submit" className={goButtonActive ? 'active' : ''}>
+          <input data-testid="form-input" name="url" type="text" value={url} onChange={(event) => setUrl(event.target.value)} />
+          <button data-testid="form-button" type="submit" className={goButtonActive ? 'active' : ''}>
             GO!
           </button>
         </label>
