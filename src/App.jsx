@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import React, { useState } from 'react';
 
 import './App.scss';
@@ -8,12 +9,12 @@ import Form from './Components/Form';
 import Results from './Components/Results';
 
 const App = () => {
-  const [data, setData] = useState(null);
-  const [requestParams, setRequestParams] = useState({});
-  const [loading, setLoading] = useState(false);
+  const [data, setData] = useState(null); // State for storing API response data
+  const [requestParams, setRequestParams] = useState({}); // State for storing API request parameters
+  const [loading, setLoading] = useState(false); // State for indicating loading state
 
   const callApi = (requestParams) => {
-    setLoading(true);
+    setLoading(true); // Start loading state
     setTimeout(() => {
       const data = {
         count: 2,
@@ -22,20 +23,20 @@ const App = () => {
           { name: 'fake thing 2', url: 'http://fakethings.com/2' },
         ],
       };
-      setData(data);
-      setRequestParams(requestParams);
-      setLoading(false);
+      setData(data); // Set API response data
+      setRequestParams(requestParams); // Set API request parameters
+      setLoading(false); // End loading state
     }, 1000);
   };
 
   return (
     <>
-      <Header />
-      <div id='requestMethod'>Request Method: {requestParams.method}</div>
-      <div id='URL'>URL: {requestParams.url}</div>
-      <Form handleApiCall={callApi} />
-      <Results data={data} loading={loading} />
-      <Footer />
+      <Header /> // Render Header component
+      <div id='requestMethod'>Request Method: {requestParams.method}</div> // Display the selected request method
+      <div id='URL'>URL: {requestParams.url}</div> // Display the entered URL
+      <Form handleApiCall={callApi} /> // Render Form component and pass the callApi function as a prop
+      <Results data={data} loading={loading} /> // Render Results component and pass data and loading state as props
+      <Footer /> // Render Footer component
     </>
   );
 };
