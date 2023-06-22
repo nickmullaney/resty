@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React, { useState } from 'react';
-
 import './App.scss';
 
 import Header from './Components/Header';
@@ -31,10 +30,9 @@ const App = () => {
 
   return (
     <>
-   
       <Header /> 
-      <div id='requestMethod'>Request Method: {requestParams.method}</div>
-      <div id='URL'>URL: {requestParams.url}</div> 
+      <div data-testid="app-div-method" id='requestMethod'>Request Method: {requestParams.method}</div>
+      <div data-testid="app-div-url" id='URL'>URL: {requestParams.url}</div> 
       <Form handleApiCall={callApi} /> 
       <Results data={data} loading={loading} /> 
       <Footer />
