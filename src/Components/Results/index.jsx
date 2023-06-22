@@ -10,7 +10,7 @@ function Results(props) {
       {
         props.loading
           ? <div>LOADING...</div> // Display "LOADING..." if the loading prop is true
-          : <pre>{props.data ? <JSONPretty id="json-pretty" theme={JSONPrettyAV} data={props.data} /> : null}</pre>
+          : <pre data-testid="results-pre">{props.data ? <JSONPretty id="json-pretty" theme={JSONPrettyAV} data={props.data} /> : null}</pre>
           // If data prop is provided, render the JSONPretty component with provided data and theme,
           // otherwise render null
       }
