@@ -1,6 +1,7 @@
 @import '../../theme/color-scheme.scss';
 
 header {
+  min-height: min-content;
   height: 10%;
   position: relative;
   overflow: hidden;
