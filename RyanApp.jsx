@@ -44,7 +44,7 @@ const App = () => {
 
   // useEffect(() => {
   //   try{
-  //   const getData = async ()=> {
+  //   async function getData() {
   //     if (requestParams.method === 'GET'){
   //       let response = await axios.get(requestParams.url);
   //       setData(response.data.results); // Set API response data
