@@ -6,7 +6,7 @@ function Form(props) {
   const [url, setUrl] = useState(''); // State for storing URL input value
   const [method, setMethod] = useState('GET'); // State for storing selected HTTP method
   const [json, setJson] = useState(''); // State for storing JSON input value
-  const [goButtonActive, setGoButtonActive] = useState(false); // New state for the GO! button
+  // const [goButtonActive, setGoButtonActive] = useState(false); // New state for the GO! button
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,7 +21,6 @@ function Form(props) {
   const handleClick = (e) => {
     const selectedMethod = e.target.id; // Get the clicked method
     setMethod(selectedMethod); // Update the selected method state
-    setGoButtonActive(true); // Set GO! button as active
   };
 
   return (
@@ -30,9 +29,7 @@ function Form(props) {
         <label>
           <span>URL: </span>
           <input data-testid="form-input" name="url" type="text" value={url} onChange={(event) => setUrl(event.target.value)} />
-          <button data-testid="form-button" type="submit" className={goButtonActive ? 'active' : ''}>
-            GO!
-          </button>
+          <button data-testid="form-button" type="submit">GO!</button>
         </label>
         <label className="methods">
           <span
